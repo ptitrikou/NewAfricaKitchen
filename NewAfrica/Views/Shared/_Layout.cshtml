@@ -1,42 +1,303 @@
 ﻿<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Mon application ASP.NET</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+<html lang="en">
 
+<head>
+    <!--================ Basic page needs ================-->
+    <title>Home 1</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!--================ Mobile specific metas ================-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--================ Favicon ================-->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <!--================ Google web fonts ================-->
+    <link href="https://fonts.googleapis.com/css?family=Arvo:ital,wght@0,400;0,700;1,400;1,700%7CGentium+Basic:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+          rel="stylesheet">
+    <!--================ Vendor CSS ================-->
+    <link rel="stylesheet" href="~/Content/Layout/steakbreak/css/fontawesome-all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons%7CMaterial+Icons+Outlined%7CMaterial+Icons+Two+Tone%7CMaterial+Icons+Round%7CMaterial+Icons+Sharp"
+          rel="stylesheet">
+    <link rel="stylesheet" href="~/Content/Layout/steakbreak/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/Layout/steakbreak/css/animate.min.css">
+    <link rel="stylesheet" href="~/Content/Layout/steakbreak/css/linearicons.css">
+    <link rel="stylesheet" href="~/Content/Layout/steakbreak/vendors/owl-carousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/Content/Layout/steakbreak/vendors/fancybox/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="~/Content/Layout/steakbreak/vendors/arcticmodal/jquery.arcticmodal-0.3.css">
+    <link rel="stylesheet" href="~/Content/Layout/steakbreak/vendors/revolution/css/settings.css">
+    <link rel="stylesheet" href="~/Content/Layout/steakbreak/vendors/revolution/css/layers.min.css">
+    <link rel="stylesheet" href="~/Content/Layout/steakbreak/vendors/revolution/css/navigation.min.css">
+    <!--================ Theme CSS ================-->
+    <link rel="stylesheet" href="~/Content/Layout/steakbreak/css/style.css">
+    <link rel="stylesheet" href="~/Content/Layout/steakbreak/css/responsive.css">
+    <!--================ Vendor JS ================-->
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
-        <div class="container">
-            @Html.ActionLink("Nom d'application", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Activer/désactiver la navigation" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
-                <ul class="navbar-nav flex-grow-1">
-                    <li>@Html.ActionLink("Accueil", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("À propos de", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                </ul>
-                 @Html.Partial("_LoginPartial")
+    <div class="mad-preloader"></div>
+    <div id="mad-page-wrapper" class="mad-page-wrapper">
+        <!--================ Search Modal ================-->
+        <div class="mad-d-none">
+            <div id="search-modal" class="mad-modal mad-modal--search">
+                <button type="button" class="arcticmodal-close"><i class="material-icons">close</i></button>
+                <h4 class="mad-title">Search</h4>
+                <!--================ Search Form ================-->
+                <form role="search" method="get" class="mad-searchform">
+                    <input type="text" name="s" placeholder="Type your keyword here">
+                    <button type="submit" class="btn"><i class="material-icons">search</i></button>
+                </form>
             </div>
         </div>
-    </nav>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Mon application ASP.NET</p>
-        </footer>
-    </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+        <!--================ Header ================-->
+        <header id="mad-header" class="mad-header mad-header--transparent header-white">
+            <div class="mad-header-section--sticky-xl">
+                <div class="container">
+                    <div class="mad-header-items">
+                        <div class="mad-header-item">
+                            <a href="index.html" class="mad-logo"><img src="images/logo.png" alt=""></a>
+                        </div>
+                        <!--================ Navigation ================-->
+                        <nav class="mad-navigation-container">
+                            <ul class="mad-navigation mad-navigation--vertical-sm">
+                                <li class="menu-item current-menu-item">
+                                    <a href="#">Home</a>
+                                    <!--================ Sub Menu ================-->
+                                    @*<ul class="sub-menu">
+                                        <li class="menu-item current-menu-item">
+                                            <a href="index.html">Main Home</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="home_2.html">Left Menu Home</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="home_3.html">Center Menu Home</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="home_4.html">Right Menu Home</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="home_5.html">Split Showcase</a>
+                                        </li>
+                                    </ul>*@
+
+                                </li>
+                                
+                                
+                                <li class="menu-item menu-item-has-children">
+                                    <a href="#">Events</a>
+                                    <!--================ Sub Menu ================-->
+                                    <ul class="sub-menu">
+                                        <li class="menu-item">
+                                            <a href="events_list.html">Events List</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="events_month.html">Events by Month</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="events_day.html">Events by Day</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="events_single.html">Single Event Page</a>
+                                        </li>
+                                    </ul>
+                                    <!--================ End of Sub Menu ================-->
+                                </li>
+                                
+                                <li class="menu-item menu-item-has-children">
+                                    <a href="#">Shop</a>
+                                    <!--================ Sub Menu ================-->
+                                    <ul class="sub-menu">
+                                        <li class="menu-item">
+                                            <a href="shop_front_sidebar.html">Shop With Right Sidebar</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="shop_front.html">Shop Without Sidebar</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="shop_single.html">Single Product Page</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="shop_checkout.html">Cart/Checkout</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="shop_account.html">My Account</a>
+                                        </li>
+                                    </ul>
+                                    <!--================ End of Sub Menu ================-->
+                                </li>
+                                <li class="menu-item menu-item-has-children">
+                                    <a href="#">Reservations</a>
+                                    <!--================ Sub Menu ================-->
+                                    <ul class="sub-menu">
+                                        <li class="menu-item">
+                                            <a href="reservation_open_table.html">Via OpenTable</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="reservation_booked.html">
+                                                Via Booked - Appointment
+                                                Booking Plugin
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <!--================ End of Sub Menu ================-->
+                                </li>
+                            </ul>
+                            <div class="mad-actions">
+                                <div class="mad-item">
+                                    <a href="#" class="mad-item-link"><i class="material-icons">person_outline</i></a>
+                                </div>
+                                <div class="mad-item mad-dropdown">
+                                    <a href="#" type="button" class="mad-item-link mad-dropdown-title">
+                                        <span class="mad-count">3</span><i class="material-icons">shopping_cart</i>
+                                    </a>
+                                    <div class="shopping-cart mad-dropdown-element">
+                                        <div class="mad-products mad-product-small">
+                                            <div class="mad-col">
+                                                <!-- Product -->
+                                                <div class="mad-product">
+                                                    <button class="mad-close-item"><i class="licon-cross-circle"></i></button>
+                                                    <a href="#" class="mad-product-image">
+                                                        <img src="images/72x72_img1.jpg" alt="">
+                                                    </a>
+                                                    <!-- product-info -->
+                                                    <div class="mad-product-description">
+                                                        <a href="#" class="mad-product-title mad-link">Crab Oscar</a>
+                                                        <span class="mad-product-price">1×$30</span>
+                                                    </div>
+                                                    <!--/ product-info -->
+                                                </div>
+                                                <!-- End of Product -->
+                                            </div>
+                                            <div class="mad-col">
+                                                <!-- Product -->
+                                                <div class="mad-product">
+                                                    <button class="mad-close-item"><i class="licon-cross-circle"></i></button>
+                                                    <a href="#" class="mad-product-image">
+                                                        <img src="images/72x72_img2.jpg" alt="">
+                                                    </a>
+                                                    <!-- product-info -->
+                                                    <div class="mad-product-description">
+                                                        <a href="#" class="mad-product-title mad-link">Burrata Salad</a>
+                                                        <span class="mad-product-price">1×$35</span>
+                                                    </div>
+                                                    <!--/ product-info -->
+                                                </div>
+                                                <!-- End of Product -->
+                                            </div>
+                                        </div>
+                                        <div class="sc-footer">
+                                            <div class="subtotal">Subtotal: <span>$21.98</span></div>
+                                            <a href="#" class="btn w-100"><span>Checkout</span> <i><img src="steakbreak_svg_icons/short_arrow_right.svg" alt="" class="svg"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mad-item">
+                                    <a href="#" class="mad-item-link" data-arctic-modal="#search-modal"><i class="material-icons">search</i></a>
+                                </div>
+                            </div>
+                        </nav>
+                        <!--================ End of Navigation ================-->
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        @RenderBody()
+
+        <!--================ Footer ================-->
+        <footer id="mad-footer" class="mad-footer">
+            <!--================ Footer row ================-->
+            <div class="mad-footer-main">
+                <div class="container wide-style-2">
+                    <div class="content-element-8">
+                        <div class="row vr-size-1">
+                            <div class="col-lg-4">
+                                <!--================ Widget ================-->
+                                <section class="mad-widget">
+                                    <h5 class="mad-widget-title">Join Our Mailing List</h5>
+                                    <p>Sign up now and get news and special offers.</p>
+                                    <form class="mad-newsletter-form one-line">
+                                        <input type="email" name="email" placeholder="Enter Your Email Address">
+                                        <button type="submit" class="btn btn-big icon-btn"><i class="material-icons">mail_outline</i></button>
+                                    </form>
+                                </section>
+                                <!--================ End of Widget ================-->
+                            </div>
+                            <div class="col-lg-4">
+                                <!--================ Widget ================-->
+                                <section class="mad-widget">
+                                    <div class="content-element-3">
+                                        <h5 class="mad-widget-title">Stay Connected</h5>
+                                        <p>Follow us on social media channels</p>
+                                    </div>
+                                    <div class="mad-social-icons style-3 size-big">
+                                        <ul class="justify-content-center">
+                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-tripadvisor"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </section>
+                                <!--================ End of Widget ================-->
+                            </div>
+                            <div class="col-lg-4">
+                                <!--================ Widget ================-->
+                                <section class="mad-widget">
+                                    <h5 class="mad-widget-title">Our Awards</h5>
+                                    <a href="#"><img src="images/awards.png" alt=""></a>
+                                </section>
+                                <!--================ End of Widget ================-->
+                            </div>
+                        </div>
+                    </div>
+                    <!--================ Widget ================-->
+                    <section class="mad-widget">
+                        <div class="mad-hr-list">
+                            <ul class="justify-content-center">
+                                <li><a href="#" class="mad-link">Home</a></li>
+                                <li><a href="#" class="mad-link">About</a></li>
+                                <li><a href="#" class="mad-link">Menu</a></li>
+                                <li><a href="#" class="mad-link">Events</a></li>
+                                <li><a href="#" class="mad-link">Contact</a></li>
+                                <li><a href="#" class="mad-link">News</a></li>
+                                <li><a href="#" class="mad-link">Reservation</a></li>
+                            </ul>
+                        </div>
+                        <p class="copyrights">
+                            Copyright © 2020 SteakBreak.
+                            All Rights Reserved.
+                        </p>
+                    </section>
+                    <!--================ End of Widget ================-->
+                </div>
+            </div>
+            <!--================ End of Footer row ================-->
+        </footer>
+
+    </div>
+    <script src="~/Content/Layout/steakbreak/vendors/modernizr.js"></script>
+    <script src="~/Content/Layout/steakbreak/vendors/jquery-3.3.1.min.js"></script>
+    <script src="~/Content/Layout/steakbreak/vendors/jquery.easing.1.3.min.js"></script>
+    <script src="~/Content/Layout/steakbreak/vendors/monkeysan.jquery.nav.1.0.min.js"></script>
+    <script src="~/Content/Layout/steakbreak/vendors/monkeysan.tabs.min.js"></script>
+    <script src="~/Content/Layout/steakbreak/vendors/handlebars-v4.0.5.min.js"></script>
+    <script src="~/Content/Layout/steakbreak/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="~/Content/Layout/steakbreak/vendors/jquery.parallax-1.1.3.min.js"></script>
+    <script src="~/Content/Layout/steakbreak/vendors/monkeysan.validator.min.js"></script>
+    <script src="~/Content/Layout/steakbreak/vendors/arcticmodal/jquery.arcticmodal-0.3.min.js"></script>
+    <script src="~/Content/Layout/steakbreak/vendors/retina.min.js"></script>
+    <script src="~/Content/Layout/steakbreak/vendors/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="~/Content/Layout/steakbreak/vendors/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="https://maps.google.com/maps/api/js?key=AIzaSyA_Yp_8RGMFiW6N-X8WLKYyfzvlOSzWwII&amp;amp;libraries=geometry&amp;amp;v=3.20"></script>
+    <script src="~/Content/Layout/steakbreak/js/modules/mad.newsletter-form.min.js"></script>
+    <script src="~/Content/Layout/steakbreak/js/modules/mad.sticky-header-section.min.js"></script>
+    <script src="~/Content/Layout/steakbreak/js/mad.app.js"></script>
 </body>
+
 </html>
