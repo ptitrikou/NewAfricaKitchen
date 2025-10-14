@@ -199,10 +199,16 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Images\accueil1.png" />
     <Content Include="Content\Images\bg1.jpg" />
+    <Content Include="Content\Images\fleur1.jpg" />
     <Content Include="Content\Images\food\dessert1.jpg" />
     <Content Include="Content\Images\food\dinner1.png" />
     <Content Include="Content\Images\food\juice1.png" />
     <Content Include="Content\Images\food\lunch1.png" />
+    <Content Include="Content\Images\food\menu1920x400.png" />
+    <Content Include="Content\Images\Logos\logo3.png" />
+    <Content Include="Content\Images\Logos\logo_newafrica_49.png" />
+    <Content Include="Content\Images\Logos\logo_newafrica_49_2.png" />
+    <Content Include="Content\Images\plate2.png" />
     <Content Include="Content\Images\slider2.jpg" />
     <Content Include="Content\Images\slider3.jpg" />
     <Content Include="Content\Layout\steakbreak\css\animate.min.css" />
@@ -932,6 +938,7 @@
     <Content Include="Content\Layout\steakbreak\images\visor2%402x.png" />
     <Content Include="Content\Layout\steakbreak\images\visor2.png" />
     <Content Include="Content\Layout\steakbreak\js\mad.app.js" />
+    <Content Include="Content\Layout\steakbreak\js\maps.js" />
     <Content Include="Content\Layout\steakbreak\js\modules\mad.alert-box.js" />
     <Content Include="Content\Layout\steakbreak\js\modules\mad.alert-box.min.js" />
     <Content Include="Content\Layout\steakbreak\js\modules\mad.contact-form.js" />
@@ -2525,6 +2532,8 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_LayoutMenu.cshtml" />
+    <Content Include="Views\Home\Menu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

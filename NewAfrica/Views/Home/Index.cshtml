@@ -25,7 +25,7 @@
                      data-voffset="['104', '104', '104', '154']" data-width="['700', '700', '700', '90%']"
                      data-textAlign="['left']" class="tp-caption tp-resizeme">
                     <div class="btn-set">
-                        <a href="#" class="btn btn-huge">Book a Table</a><a href="#" class="btn btn-huge">
+                        <a href="@Url.Action("Menu","Home")" class="btn btn-huge">Our menu</a><a href="#" class="btn btn-huge">
                             Order
                             Online
                         </a>
@@ -53,7 +53,7 @@
                      data-voffset="['104', '104', '104', '154']" data-width="['700', '700', '700', '90%']"
                      data-textAlign="['left']" class="tp-caption tp-resizeme">
                     <div class="btn-set">
-                        <a href="#" class="btn btn-huge">Book a Table</a><a href="#" class="btn btn-huge">
+                        <a href="@Url.Action("Menu","Home")" class="btn btn-huge">Our menu</a><a href="#" class="btn btn-huge">
                             Order
                             Online
                         </a>
@@ -81,7 +81,7 @@
                      data-voffset="['104', '104', '104', '154']" data-width="['700', '700', '700', '90%']"
                      data-textAlign="['left']" class="tp-caption tp-resizeme">
                     <div class="btn-set">
-                        <a href="#" class="btn btn-huge">Book a Table</a><a href="#" class="btn btn-huge">
+                        <a href="@Url.Action("Menu","Home")" class="btn btn-huge">Book a Table</a><a href="#" class="btn btn-huge">
                             Order
                             Online
                         </a>
@@ -184,6 +184,8 @@
                 </div>
             </div>
         </div>
+
+        <!--================ Diner to dessert================-->
         <div class="mad-section mad-section--stretched-content">
             <div class="mad-colorizer-bg-color">
                 <div class="with-svg-item svg-right-side top-space"><img src="~/Content/Layout/steakbreak/images/tomatos.png" alt=""></div>
@@ -232,122 +234,95 @@
                 </div>
             </div>
         </div>
-        <div data-bg-image-src="~/Content/Layout/steakbreak/images/1920x664_bg1.jpg"
-             class="mad-cta mad-section no-pt with-texture mad-section--stretched mad-colorizer--scheme-">
-            <div class="mad-colorizer-bg-color">
-                <span class="mad-section-texture top-side">
-                    <img src="~/Content/Layout/steakbreak/steakbreak_svg_icons/uneven_bg_2.svg" alt="" class="svg">
-                </span>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-xl-8">
-                    <!--================ Testimonials ================-->
-                    <div class="mad-testimonials single-item sm-pt">
-                        <div class="mad-grid mad-grid--cols-1 owl-carousel">
-                            <!-- owl item -->
-                            <div class="mad-grid-item">
-                                <div class="mad-testimonial">
-                                    <div data-estimate="5" class="mad-rating"></div>
-                                    <div class="mad-testiomonial-info">
-                                        <blockquote>
-                                            <p>
-                                                “Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum
-                                                vel, cursus eleifend,
-                                                elit. Aenean auctor wisi et urna. Aliquam erat volutpat. ”
-                                            </p>
-                                        </blockquote>
-                                    </div>
-                                    <div class="mad-author">
-                                        <div class="mad-author-info">
-                                            <cite>Mark & Rebecca Johnson, CA, USA</cite>
-                                            <span><img src="~/Content/Layout/steakbreak/images/visor.png" alt=""></span>
-                                        </div>
-                                    </div>
+
+        <!--================ What we offer================-->
+        <div data-bg-image-src="/Content/Layout/steakbreak/images/texture_bg2.jpg" class="mad-section mad-section--stretched mad-colorizer--scheme- mad-colorizer--scheme-light">
+            <h2 class="mad-title align-center">What We Offer</h2>
+            <div class="row">
+                <div class="col-lg-3">
+                    <!--================ Icon Boxes ================-->
+                    <div class="mad-icon-boxes style-2 align-right item-col-1">
+                        <div class="mad-col">
+                            <!--================ Icon Box ================-->
+                            <article class="mad-icon-box">
+                                <i class="mad-icon-box-icon"><img class="svg" src="~/Content/Layout/steakbreak/steakbreak_svg_icons/catering.svg" alt=""></i>
+                                <div class="mad-icon-box-content">
+                                    <h6 class="mad-icon-box-title">Catering</h6>
+                                    <p>
+                                        Donec in velit vel ipsum auctor pulvinar. Vestibulum iaculis lacinia est.
+                                    </p>
+                                    <a href="#" class="mad-read-more small-size style-5 no-icon">Learn More</a>
                                 </div>
-                            </div>
-                            <!-- / owl item -->
-                            <!-- owl item -->
-                            <div class="mad-grid-item">
-                                <div class="mad-testimonial">
-                                    <div data-estimate="5" class="mad-rating"></div>
-                                    <div class="mad-testiomonial-info">
-                                        <blockquote>
-                                            <p>
-                                                “Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at,
-                                                neque.
-                                                Vivamus eget
-                                                nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros.”
-                                            </p>
-                                        </blockquote>
-                                    </div>
-                                    <div class="mad-author">
-                                        <div class="mad-author-info">
-                                            <cite>Marta Healy, CA, USA</cite>
-                                            <span><img src="~/Content/Layout/steakbreak/images/visor.png" alt=""></span>
-                                        </div>
-                                    </div>
+                            </article>
+                            <!--================ End of Icon Box ================-->
+                        </div>
+                        <div class="mad-col">
+                            <!--================ Icon Box ================-->
+                            <article class="mad-icon-box">
+                                <i class="mad-icon-box-icon"><img class="svg" src="~/Content/Layout/steakbreak/steakbreak_svg_icons/package.svg" alt=""></i>
+                                <div class="mad-icon-box-content">
+                                    <h6 class="mad-icon-box-title">Order Online</h6>
+                                    <p>
+                                        Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in.
+                                    </p>
+                                    <a href="#" class="mad-read-more small-size style-5 no-icon">Learn More</a>
                                 </div>
-                            </div>
-                            <!-- / owl item -->
-                            <!-- owl item -->
-                            <div class="mad-grid-item">
-                                <div class="mad-testimonial">
-                                    <div data-estimate="5" class="mad-rating"></div>
-                                    <div class="mad-testiomonial-info">
-                                        <blockquote>
-                                            <p>
-                                                “Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum
-                                                vel, cursus eleifend,
-                                                elit. Aenean auctor wisi et urna. Aliquam erat volutpat. ”
-                                            </p>
-                                        </blockquote>
-                                    </div>
-                                    <div class="mad-author">
-                                        <div class="mad-author-info">
-                                            <cite>Mark & Rebecca Johnson, CA, USA</cite>
-                                            <span><img src="~/Content/Layout/steakbreak/images/visor.png" alt=""></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- / owl item -->
+                            </article>
+                            <!--================ End of Icon Box ================-->
                         </div>
                     </div>
-                    <!--================ End of Testimonials ================-->
-                </div>
-            </div>
-        </div>
-        <div class="mad-section mad-bg-section no-pd mad-section--stretched mad-colorizer--scheme- mad-colorizer--parallax" data-bg-image-src="images/1920x1000_bg1.jpg"></div>
-        <div data-bg-image-src="images/1920x648_bg1.jpg" class="mad-section no-pb mad-section--stretched mad-colorizer--scheme-color-5 no-space">
-            <div class="mad-colorizer-bg-color">
-                <div class="with-svg-item svg-left-2"><img src="images/garlic2.png" alt=""></div>
-            </div>
-            <div class="row hr-size-2">
-                <div class="col-lg-6">
-                    <div class="mad-top-offset mad-bottom-offset">
-                        <h2>Upcoming Event</h2>
-                        <p class="mad-text-large mad-text-color-2"><b><span class="mad-text-color-3">BBQ Party</span> | <span class="mad-text-color-3">April 28, 2021</span> | <span class="mad-text-color-3">6 PM - 9 PM</span></b></p>
-                        <p class="mad-text-big content-element-5">
-                            Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl,
-                            porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh. Etiam cursus leo vel metus.
-                        </p>
-                        <a href="#" class="btn btn-big"><span class="texture"></span><span>Make a Reservation</span></a>
-                    </div>
+                    <!--================ End of Icon Boxes ================-->
                 </div>
                 <div class="col-lg-6">
-                    <figure class="mad-img-holder img-overlay">
-                        <div class="mad-img"><img src="images/763x648_img1.png" alt=""></div>
+                    <figure class="mad-img-holder">
+                        <img src="~/Content/Images/plate2.png" alt="">
                     </figure>
                 </div>
+                <div class="col-lg-3">
+                    <!--================ Icon Boxes ================-->
+                    <div class="mad-icon-boxes style-2 item-col-1">
+                        <div class="mad-col">
+                            <!--================ Icon Box ================-->
+                            <article class="mad-icon-box">
+                                <i class="mad-icon-box-icon"><img class="svg" src="~/Content/Layout/steakbreak/steakbreak_svg_icons/wine.svg" alt=""></i>
+                                <div class="mad-icon-box-content">
+                                    <h6 class="mad-icon-box-title">Private Dining</h6>
+                                    <p>
+                                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.
+                                    </p>
+                                    <a href="#" class="mad-read-more small-size style-5 no-icon">Learn More</a>
+                                </div>
+                            </article>
+                            <!--================ End of Icon Box ================-->
+                        </div>
+                        <div class="mad-col">
+                            <!--================ Icon Box ================-->
+                            <article class="mad-icon-box">
+                                <i class="mad-icon-box-icon"><img class="svg" src="~/Content/Layout/steakbreak/steakbreak_svg_icons/gift_card.svg" alt=""></i>
+                                <div class="mad-icon-box-content">
+                                    <h6 class="mad-icon-box-title">Gift Cards</h6>
+                                    <p>
+                                        Suspendisse sollicitudin velit sed leo. Ut pharetra augue nec augue.
+                                    </p>
+                                    <a href="#" class="mad-read-more small-size style-5 no-icon">Learn More</a>
+                                </div>
+                            </article>
+                            <!--================ End of Icon Box ================-->
+                        </div>
+                    </div>
+                    <!--================ End of Icon Boxes ================-->
+                </div>
             </div>
         </div>
+
+        
         <div class="mad-section no-pd mad-section--stretched-content">
             <div class="g-map-wrap">
                 <div id="googleMap" class="mad-gmap"></div>
             </div>
             <div class="mad-colorizer-bg-color with-map">
                 <span class="mad-section-texture top-side-2">
-                    <img src="steakbreak_svg_icons/uneven_bg_1.svg" alt="" class="svg">
+                    <img src="~/Content/Layout/steakbreak/steakbreak_svg_icons/uneven_bg_1.svg" alt="" class="svg">
                 </span>
                 <div class="mad-section-element bottom-left">
                     <!--================ Icon Boxes ================-->
@@ -355,7 +330,7 @@
                         <div class="mad-col">
                             <!--================ Icon Box ================-->
                             <article class="mad-icon-box">
-                                <i class="mad-icon-box-icon"><img class="svg" src="steakbreak_svg_icons/phone.svg" alt=""></i>
+                                <i class="mad-icon-box-icon"><img class="svg" src="~/Content/Layout/steakbreak/steakbreak_svg_icons/phone.svg" alt=""></i>
                                 <div class="mad-icon-box-content">
                                     <h6 class="mad-icon-box-title">
                                         +1 800 603 6035 <br>
@@ -371,7 +346,7 @@
                         <div class="mad-col">
                             <!--================ Icon Box ================-->
                             <article class="mad-icon-box">
-                                <i class="mad-icon-box-icon"><img class="svg" src="steakbreak_svg_icons/globe.svg" alt=""></i>
+                                <i class="mad-icon-box-icon"><img class="svg" src="~/Content/Layout/steakbreak/steakbreak_svg_icons/globe.svg" alt=""></i>
                                 <div class="mad-icon-box-content">
                                     <h6 class="mad-icon-box-title">
                                         56 12th Ave, <br>
@@ -385,7 +360,7 @@
                         <div class="mad-col">
                             <!--================ Icon Box ================-->
                             <article class="mad-icon-box">
-                                <i class="mad-icon-box-icon"><img class="svg" src="steakbreak_svg_icons/clock.svg" alt=""></i>
+                                <i class="mad-icon-box-icon"><img class="svg" src="~/Content/Layout/steakbreak/steakbreak_svg_icons/clock.svg" alt=""></i>
                                 <div class="mad-icon-box-content">
                                     <h6 class="mad-icon-box-title">
                                         Monday – Saturday: <br>
@@ -403,11 +378,11 @@
                 </div>
             </div>
         </div>
-        <div data-bg-image-src="images/1920x528_redbg1.jpg"
+        <div data-bg-image-src="/Content/Layout/steakbreak/images/1920x528_redbg1.jpg"
              class="mad-section size-5 with-texture mad-section--stretched mad-colorizer--scheme-color-4 mad-colorizer--scheme-light">
             <div class="mad-colorizer-bg-color">
                 <span class="mad-section-texture">
-                    <img src="steakbreak_svg_icons/uneven_bg_1.svg"
+                    <img src="~/Content/Layout/steakbreak/steakbreak_svg_icons/uneven_bg_1.svg"
                          alt="" class="svg">
                 </span>
             </div>
@@ -439,38 +414,39 @@
                 </div>
             </div>
         </div>
+        
         <div class="mad-section no-pd mad-section--stretched-content">
             <div class="mad-instafeed">
                 <div class="mad-grid item-col-5 no-gutters">
                     <div class="mad-col">
-                        <a href="#"><img src="images/384x384_img1.jpg" alt=""></a>
+                        <a href="#"><img src="~/Content/Layout/steakbreak/images/384x384_img1.jpg" alt=""></a>
                     </div>
                     <div class="mad-col">
-                        <a href="#"><img src="images/384x384_img2.jpg" alt=""></a>
+                        <a href="#"><img src="~/Content/Layout/steakbreak/images/384x384_img2.jpg" alt=""></a>
                     </div>
                     <div class="mad-col">
-                        <a href="#"><img src="images/384x384_img3.jpg" alt=""></a>
+                        <a href="#"><img src="~/Content/Layout/steakbreak/images/384x384_img3.jpg" alt=""></a>
                     </div>
                     <div class="mad-col">
-                        <a href="#"><img src="images/384x384_img4.jpg" alt=""></a>
+                        <a href="#"><img src="~/Content/Layout/steakbreak/images/384x384_img4.jpg" alt=""></a>
                     </div>
                     <div class="mad-col">
-                        <a href="#"><img src="images/384x384_img5.jpg" alt=""></a>
+                        <a href="#"><img src="~/Content/Layout/steakbreak/images/384x384_img5.jpg" alt=""></a>
                     </div>
                     <div class="mad-col">
-                        <a href="#"><img src="images/384x384_img6.jpg" alt=""></a>
+                        <a href="#"><img src="~/Content/Layout/steakbreak/images/384x384_img6.jpg" alt=""></a>
                     </div>
                     <div class="mad-col">
-                        <a href="#"><img src="images/384x384_img7.jpg" alt=""></a>
+                        <a href="#"><img src="~/Content/Layout/steakbreak/images/384x384_img7.jpg" alt=""></a>
                     </div>
                     <div class="mad-col">
-                        <a href="#"><img src="images/384x384_img8.jpg" alt=""></a>
+                        <a href="#"><img src="~/Content/Layout/steakbreak/images/384x384_img8.jpg" alt=""></a>
                     </div>
                     <div class="mad-col">
-                        <a href="#"><img src="images/384x384_img9.jpg" alt=""></a>
+                        <a href="#"><img src="~/Content/Layout/steakbreak/images/384x384_img9.jpg" alt=""></a>
                     </div>
                     <div class="mad-col">
-                        <a href="#"><img src="images/384x384_img10.jpg" alt=""></a>
+                        <a href="#"><img src="~/Content/Layout/steakbreak/images/384x384_img10.jpg" alt=""></a>
                     </div>
                 </div>
             </div>
