@@ -1,0 +1,142 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&amp;display=swap);
+
+.evs-font-size-18 {
+    font-size: 18px !important
+}
+
+.evs-page-content {
+    padding: calc(70px + 24px) calc(24px / 2) 60px calc(24px / 2)
+}
+
+.evs-noti-icon i {
+    font-size: 22px;
+    color: #555b6d
+}
+
+.evs-noti-icon .badge {
+    position: absolute;
+    top: 12px;
+    right: 4px
+}
+
+.evs-notification-item .evs-d-flex {
+    padding: .75rem 1rem
+}
+
+    .notification-item .d-flex:hover {
+        background-color: #f6f6f6
+    }
+
+@-webkit-keyframes spinner-chase {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes spinner-chase {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@-webkit-keyframes chase-dot {
+    100%, 80% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes chase-dot {
+    100%, 80% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@-webkit-keyframes chase-dot-before {
+    50% {
+        -webkit-transform: scale(.4);
+        transform: scale(.4)
+    }
+
+    0%, 100% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+@keyframes chase-dot-before {
+    50% {
+        -webkit-transform: scale(.4);
+        transform: scale(.4)
+    }
+
+    0%, 100% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+[type=email]::-webkit-input-placeholder,
+[type=number]::-webkit-input-placeholder,
+[type=tel]::-webkit-input-placeholder,
+[type=url]::-webkit-input-placeholder {
+    text-align: left
+}
+
+[type=email]::-moz-placeholder,
+[type=number]::-moz-placeholder,
+[type=tel]::-moz-placeholder,
+[type=url]::-moz-placeholder {
+    text-align: left
+}
+
+[type=email]:-ms-input-placeholder,
+[type=number]:-ms-input-placeholder,
+[type=tel]:-ms-input-placeholder,
+[type=url]:-ms-input-placeholder {
+    text-align: left
+}
+
+
+[type=email]::placeholder,
+[type=number]::placeholder,
+[type=tel]::placeholder,
+[type=url]::placeholder {
+    text-align: left
+}
+
+[data-simplebar] {
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start
+}
+
+.evs-page-title-box {
+    padding-bottom: 24px
+}
+
+    .evs-page-title-box .evs-breadcrumb {
+        background-color: transparent;
+        padding: 0
+    }
+
+    .evs-page-title-box h4 {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 16px !important
+    }

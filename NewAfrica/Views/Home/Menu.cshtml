@@ -1,7 +1,8 @@
-﻿
+﻿@using NewAfrica.Models; 
 @{
     ViewBag.Title = "Menu";
     Layout = "~/Views/Shared/_LayoutMenu.cshtml";
+    List<SOUSFAMILL> listcategs = ViewBag.listcateg;
 }
 
 <div class="mad-content no-pd">
@@ -20,18 +21,16 @@
                                 <div class="mad-tabs">
                                     <!--================ Tabs Navigation ================-->
                                     <div role="tablist" aria-label="Tabs v1" class="mad-tabs-nav">
-                                        <span class="mad-active">
-                                            <a id="tab-1-link" href="#tab-1" role="tab" aria-selected="false"
-                                               aria-controls="tab-1" class="mad-tab-link">Main Course</a>
-                                        </span>
-                                        <span>
+                                        @foreach (SOUSFAMILL sf in listcategs)
+                                        {
+                                            <span class="mad-active">
+                                                <a id="@sf.idsf" href="#@sf.idsf" role="tab" aria-selected="false" aria-controls="@sf.idsf" class="mad-tab-link">@sf.libsf</a>
+                                            </span>
+                                        }
+                                        @*<span>
                                             <a id="tab-2-link" href="#tab-2" role="tab" aria-selected="true" aria-controls="tab-2"
                                                class="mad-tab-link">Appetizers</a>
-                                        </span>
-                                        <span>
-                                            <a id="tab-3-link" href="#tab-3" role="tab" aria-selected="false" aria-controls="tab-3"
-                                               class="mad-tab-link">Sides</a>
-                                        </span>
+                                        </span>*@                                   
                                     </div>
 
                                     <!--================ CONTENU ================-->

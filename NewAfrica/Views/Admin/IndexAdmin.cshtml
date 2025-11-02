@@ -1,0 +1,79 @@
+﻿@using NewAfrica.Models
+@model List<SOUSFAMILL>
+@{
+    ViewBag.Title = "Administrateur";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    int num = 1;
+}
+
+<!-- Web Statistics -->
+<div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center justify-content-between flex-wrap flex-md-nowrap">
+            <div class="dsh-section-title">
+                <h5 class="card-title">Données Administrateur de votre Site web</h5>
+                <h6 class="card-subtitle">Modification des catégories</h6>
+            </div>
+        </div>
+
+        <!--Tableau d'images'-->
+        <table id="list_items" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>N°</th>
+                    <th>Libellé de la catégorie</th>
+                    <th>Image 1</th>
+                    <th>Image 2</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    foreach (SOUSFAMILL categ in Model)
+                    {
+                        <tr>
+                            <td align="center" width="30px">@(num++)</td>
+                            <td>@categ.libsf</td>
+                            <td><img src="~/Content/images/@categ.imgsf" style="height:auto;width:auto" alt=""></td>
+                            <td><img src="~/Content/images/@categ.imgsf2" style="height:auto;width:auto" alt=""></td>
+                            @*<td><img src="~/Content/images/@item.path3" style="height:auto;width:auto" alt=""></td>*@
+                            <td width="10px"><a href="@Url.Action("DetailCateg","Admin",new {idcateg=categ.idsf})" onclick=""><i class="fas fa-edit blue" style="color:#0069d9"></i></a></td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+@section scripts
+    {
+    <!-- Page Specific Scripts -->
+    <script src="~/Content/Layouts/Dashield/vendor/js/datatables.min.js"></script>
+    <script src="~/Content/Layouts/Dashield/responsive.js"></script>
+
+    <script type="text/javascript">
+        //Confirmation - Nouveau client
+        if ('@TempData["modifimg"]' == "success"){
+            Swal.fire({
+                text: "Image modifiée avec succès.",
+                icon: "success",
+                buttonsStyling: !1,
+                confirmButtonText: "Ok",
+                customClass: { confirmButton: "btn btn-primary" }
+            })
+        }
+        if ('@TempData["modifimg"]' == "fail"){
+            Swal.fire({
+                text: "Erreur lors de la modification de l'image.",
+                icon: "error",
+                buttonsStyling: !1,
+                confirmButtonText: "Ok",
+                customClass: { confirmButton: "btn btn-primary" }
+            })
+        }
+    </script>
+}
+

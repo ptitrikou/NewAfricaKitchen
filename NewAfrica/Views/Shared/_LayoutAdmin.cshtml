@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Meta Gradient -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="Gestion collaborative">
+    <meta name="author" content="Evaasys" />
+    <!-- Meta Dashield -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <!--TITRE-->
+    <title>@ViewBag.title | Mesys</title>
+
+    <!-- Favicon icon -->
+    <link rel="icon" href="~/Content/Layout/gradient-able/assets/images/favicon.ico" type="image/x-icon">
+    <!-- prism css -->
+    @*<link rel="stylesheet" href="~/Content/Layout/gradient-able/assets/css/plugins/prism-coy.css">*@
+    <!-- vendor css -->
+    <link rel="stylesheet" href="~/Content/Layout/gradient-able/assets/css/eva-able.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&amp;display=swap" rel="stylesheet">
+
+    <!--SKOTE-->
+    <!-- Bootstrap Css -->
+    <link href="~/Content/Layout/Skote/sk-eva.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="~/Content/Layout/Skote/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="~/Content/Layout/Skote/app.min2.css" id="app-style" rel="stylesheet" type="text/css" />
+
+    <!--DASHIELD-->
+    <!-- Iconic Fonts -->
+    <link rel="stylesheet" href="~/Content/Layout/Dashield/vendor/fonts/line-icons/LineIcons.min.css">
+    <link rel="stylesheet" href="~/Content/Layout/Dashield/vendor/fonts/font-awesome/css/all.min.css">
+    <!-- Plugins -->
+    <link href="~/Content/Layout/Dashield/vendor/dist/libs.bundle.css" rel="stylesheet">
+    <!-- Dashield styles -->
+    <link href="~/Content/Layout/Dashield/vendor/dist/style.bundle.css" rel="stylesheet">
+
+    <style rel="stylesheet" type="text/css">
+        * {
+            font-family: "Poppins", sans-serif;
+            /*font-size: 13px;*/
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="dsh-preloader bg-white">
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Chargement...</span>
+        </div>
+    </div>
+
+    <!-- [ navigation menu ] start -->
+    <nav class="ev-pcoded-navbar ev-menupos-fixed ev-menu-light ev-brand-blue">
+        <div class="ev-navbar-wrapper">
+            <div class="ev-navbar-content ev-scroll-div">
+                <ul class="ev-nav ev-pcoded-inner-navbar">
+                    <!--SECTION GESTION-->
+                    <li class="ev-nav-item ev-pcoded-menu-caption">
+                        <label>Menu</label>
+                    </li>
+                    <!--tableau de bord-->
+                    <li class="ev-nav-item"><a href="@Url.Action("IndexAdmin","Admin")" class="ev-nav-link "><span class="ev-pcoded-micon"><i class="feather icon-image"></i></span><span class="ev-pcoded-mtext">Catégories</span></a></li>
+
+                    <li class="ev-nav-item"><a href="@Url.Action("ImagesItem","Admin")" class="ev-nav-link "><span class="ev-pcoded-micon"><i class="feather icon-image"></i></span><span class="ev-pcoded-mtext">Liste des articles</span></a></li>
+
+
+                    <!--AIDE-->
+                    <div class="ev-card text-center">
+                        <div class="ev-card-block">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            <i class="feather icon-sunset f-40"></i>
+                            <h6 class="mt-3">Besion d'aide?</h6>
+                            <p>Contacter EvaaSys Sarl par mail</p>
+                            <a href="#!" target="_blank" class="btn btn-primary btn-sm text-white m-0">Support</a>
+                        </div>
+                    </div>
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--HEADER-->
+    <header class="ev-navbar ev-pcoded-header ev-navbar-expand-lg ev-navbar-light ev-headerpos-fixed">
+        <!-- HEADER HAUT GAUCHE -->
+        <div class="ev-m-header">
+            <a class="ev-mobile-menu" id="ev-mobile-collapse" href="#!"><span></span></a>
+            <a href="@Url.Action("Index","Home")" class="ev-b-brand">
+                <!-- ========   LOGO   ============ -->
+                <img src="~/Content/Layout/gradient-able/assets/images/logo-icon-dark.html" alt="Logo EvaDesk" class="logo-thumb">
+                <img src="~/Content/Images/logos/logo_mesys33_1.jpg" alt="">
+            </a>
+            <a href="#!" class="ev-mob-toggler">
+                <i class="feather icon-more-vertical"></i>
+            </a>
+        </div>
+
+        <!-- HEADER HAUT DROITE -->
+        <div class="ev-collapse ev-navbar-collapse">
+
+        </div>
+
+    </header>
+
+    <!-- [MAIN CONTENT] -->
+    <!-- Body Content Wrapper -->
+    @*<div class="dsh-content-wrapper">
+                @RenderBody()
+        </div>*@
+    <div class="pcoded-main-container">
+        <div class="pcoded-wrapper">
+            <div class="pcoded-content">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Information -->
+    <button type="button" class="dsh-extra-page--info dsh-tooltip" title="Page Info" data-placement="left" data-toggle="modal" data-target="#pageInformation">
+        <i class="lni-warning"></i>
+    </button>
+
+    <!--GRADIENT CUSTOM-->
+    <!-- Required Js -->
+    <script src="~/Content/Layout/gradient-able/assets/js/vendor-all.min.js"></script>
+    @*<script src="~/Content/Layout/gradient-able/assets/js/plugins/bootstrap.min.js"></script>*@
+    <script src="~/Content/Layout/gradient-able/assets/js/pcoded.min.js"></script>
+    @*<script src="~/Content/Layout/gradient-able/assets/js/menu-setting.min.js"></script>*@
+    <!-- prism Js -->
+    @*<script src="~/Content/Layout/gradient-able/assets/js/plugins/prism.js"></script>*@
+
+    <!--DASHIELD-->
+    <!-- Plugins -->
+    <script src="~/Content/Layout/Dashield/vendor/dist/libs.bundle.js"></script>
+    <!-- Dashield core JavaScript -->
+    <script src="~/Content/Layout/Dashield/vendor/dist/script.bundle.js"></script>
+
+    <!--SECTIONS-->
+    @RenderSection("scripts", required: false)
+</body>
+</html>
