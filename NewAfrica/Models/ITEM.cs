@@ -10,6 +10,7 @@ namespace NewAfrica.Models
     public partial class ITEM
     {
         [Key]
+        [Column(Order = 0)]
         public long iditem { get; set; }
 
         [StringLength(64)]
@@ -24,58 +25,38 @@ namespace NewAfrica.Models
         [StringLength(255)]
         public string designdetails2 { get; set; }
 
+        [Key]
+        [Column(Order = 1)]
         public decimal prixitem { get; set; }
 
+        [Key]
+        [Column(Order = 2)]
         public decimal prix1 { get; set; }
 
+        [Key]
+        [Column(Order = 3)]
         public decimal prix2 { get; set; }
 
+        [Key]
+        [Column(Order = 4)]
         public decimal prix3 { get; set; }
 
+        [Key]
+        [Column(Order = 5)]
         public double tauxremiz { get; set; }
 
         [StringLength(10)]
         public string devise { get; set; }
 
-        public int typeitem { get; set; }
-
-        public int category { get; set; }
-
-        public int nbgarantie { get; set; }
-
-        public int typperiodgarantie { get; set; }
-
-        [StringLength(255)]
-        public string capacitappro { get; set; }
-
-        [StringLength(255)]
-        public string typeappro { get; set; }
-
-        [StringLength(255)]
-        public string detailslivraison { get; set; }
-
+        [Key]
+        [Column(Order = 6)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int etatitem { get; set; }
 
-        public int etatitem2 { get; set; }
-
-        public int etatitem3 { get; set; }
-
+        [Key]
+        [Column(Order = 7)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ordre1 { get; set; }
-
-        public int ordre2 { get; set; }
-
-        public int typpublish { get; set; }
-
-        public DateTime datpublish { get; set; }
-
-        public DateTime datpromo1 { get; set; }
-
-        public DateTime datpromo2 { get; set; }
-
-        [StringLength(255)]
-        public string numcontact { get; set; }
-
-        public long payscontact { get; set; }
 
         [StringLength(255)]
         public string path1 { get; set; }
@@ -87,7 +68,5 @@ namespace NewAfrica.Models
         public string path3 { get; set; }
 
         public long? idsf { get; set; }
-
-        public virtual SOUSFAMILL SOUSFAMILL { get; set; }
     }
 }
